@@ -1,1 +1,13 @@
+version: '3.9'
+services:
+  my-fastapi-serivce:
+    container_name: whos-my-ta
+    build:
+      context: .
+      dockerfile: dockerfile
 
+    image: recitdocker3:latest
+    cpus: 1
+    mem_limit: 1024m
+    ports:
+      - "4568:4568"
